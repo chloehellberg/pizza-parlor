@@ -29,10 +29,9 @@ $(document).ready(function() {
     $("input:checkbox[name=topping-option]:checked").each(function(){
       newOrder.toppingsChoice.push(parseInt($(this).val()));
     });
-      console.log('Toppings Choice', newOrder.toppingsChoice);
 
-    newOrder.sizeChoice.push(parseInt($("#size-option").val()));
-    console.log('Size Choice', newOrder.sizeChoice);
-    });   
-})
+      newOrder.sizeChoice.push(parseInt($("#size-option").val()));
+
+  });   
+});
 
