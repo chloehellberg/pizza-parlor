@@ -5,20 +5,37 @@ function PizzaOrder () {
   this.sizeChoice = []
 }
 
-// let pizzaOptions = {
-//   toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms", "Black Olives", "Basil", "Pepperoni"],
-//   size = ["Mini", "Medium", "Large"],
+PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
+  
+  let toppingsChoiceTotal = [this.toppingsChoice.reduce((a,b) => a + b, 0)];
+  let sizeChoiceTotal = this.sizeChoice;
+  let totalCost = 0;
+
+  for (let i = 0; i < toppingsChoiceTotal.)
+
+
+
+  var arr1 = [2,3,4,5];
+  var arr2 = [4,3,3,1];
+  var sum = 0;
+  for(var i = 0; i < arr1.length; i++){
+    sum.push(array1[i] + array2[i]);
+ }
+
+
+ 
+
+//   for (let i = 0; i <= toppingsChoice.length; i++ ) {
+//     let toppingsTotal = this.toppingsChoice.sum();
+//   }
 // }
 
-// PizzaOrder.prototype.calculateCost = function (toppings, size) {
-//   let orderArray = [];
-
-//   for (let i = 0; i <= toppings.length; i++ )
-  
-// };
 
 
-// User Interface Logic
+
+
+
+// UI Logic
 
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
@@ -29,9 +46,16 @@ $(document).ready(function() {
     $("input:checkbox[name=topping-option]:checked").each(function(){
       newOrder.toppingsChoice.push(parseInt($(this).val()));
     });
-
       newOrder.sizeChoice.push(parseInt($("#size-option").val()));
-
   });   
 });
 
+
+
+
+
+
+// let pizzaOptions = {
+//   toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms", "Black Olives", "Basil", "Pepperoni"],
+//   size = ["Mini", "Medium", "Large"],
+// }
