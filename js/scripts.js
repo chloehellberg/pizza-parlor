@@ -21,9 +21,9 @@ PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
   for(var i = 0; i < arr1.length; i++){
     sum.push(array1[i] + array2[i]);
  }
+s
 
 
- 
 
 //   for (let i = 0; i <= toppingsChoice.length; i++ ) {
 //     let toppingsTotal = this.toppingsChoice.sum();
