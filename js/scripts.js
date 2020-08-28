@@ -18,8 +18,6 @@
 // };
 
 
-// let order = new PizzaOrder()
-// console.log(order.calculateCost());
 
 
 
@@ -29,15 +27,20 @@
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
     event.preventDefault();
+    
+    let newOrder = new PizzaOrder();
+    console.log(order.calculateCost());
 
-
-    let toppingsChoice = $("input:checkbox[name=topping-option]:checked").each(function(){
-      const toppingsChoice = [parseInt($(this).val())];
+    let toppingsChoice = [];
+     $("input:checkbox[name=topping-option]:checked").each(function(){
+      toppingsChoice.push(parseInt($(this).val()));
       console.log(toppingsChoice);
     })
 
-    let sizeChoice = parseInt[($("#size-option").val())];
-      console.log(sizeChoice);
+    let sizeChoice = [];
+    sizeChoice.push(parseInt($("#size-option").val()));
+    console.log(sizeChoice);
 
   })
 })
+
