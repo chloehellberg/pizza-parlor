@@ -12,8 +12,8 @@ function PizzaOrder () {
 }
 
 let pizzaOptions = {
-  toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms"],
-  size = ["Small", "Medium", "Large"],
+  toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms", "Black Olives", "Basil", "Pepperoni"],
+  size = ["Mini", "Medium", "Large"],
 }
 
 PizzaOrder.prototype.calculateCost = function (toppings, size) {
