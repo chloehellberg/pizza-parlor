@@ -10,42 +10,60 @@
   <title>Pizza Planet</title>
 </head>
 <body>
-  <div class="container" id="intro">
-    <div class="jumbotron">
-      <h1>Pizza Planet</h1>
-      <img src="img/pizza.png">
+  <div class="container">
+    <div class="intro">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="intro-image">
+            <img src="img/pizza.png" class="image-pizza" alt="A photo of pizza">
+          </div> 
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div card="card-body">
+              <div class="intro-blurb">
+                <h1 class="card-title">Pizza Planet</h1>
+                <h3>Eat pizza or else.</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div> 
   <div class = "container" id ="pizza-options">
-    <form id="formOne">
-      <div class="form-group-toppings">
-        <p>All pizzas start with mozzarella. Please pick a minimum of at least 3. Please pick your toppings from the options below:</p>
-        <input type="checkbox" name="topping-option" value="1">Potato<br>
-        <input type="checkbox" name="topping-option" value="2">Carmelized Onions<br>
-        <input type="checkbox" name="topping-option" value="2">Fresh Chives<br>
-        <input type="checkbox" name="topping-option" value="3">Sausage<br>
-        <input type="checkbox" name="topping-option" value="1">Sauteed Mushrooms<br>
-        <input type="checkbox" name="topping-option" value="1">Black Olives<br>
-        <input type="checkbox" name="topping-option" value="2">Basil<br>
-        <input type="checkbox" name="topping-option" value="3">Pepperoni<br>
-      </div>
-      <div class="form-group-sizes">
-        <label for="size-option">What is your hunger level? Please pick your pizza size:</label>
-        <select class="form-control" id="size-option">
-          <option value="1">Mini - 10" round feeds 1</option>
-          <option value="2">Medium - 14" oblong feeds 2</option>
-          <option value="3">Large - 16" round feeds 3</option>
-        </select>
-      </div>
-    
-      <button id="submit" type="submit" name="button">Submit Order</button>
-    </form>
+    <div class = "card">
+      <form id="formOne">
+        <div class="form-group-toppings">
+          <p>All pizzas start with mozzarella. Please pick your toppings from the options below:</p>
+          <input type="checkbox" name="topping-option" value="1"> Potato<br>
+          <input type="checkbox" name="topping-option" value="2"> Carmelized Onions<br>
+          <input type="checkbox" name="topping-option" value="2"> Fresh Chives<br>
+          <input type="checkbox" name="topping-option" value="3"> Sausage<br>
+          <input type="checkbox" name="topping-option" value="1"> Sauteed Mushrooms<br>
+          <input type="checkbox" name="topping-option" value="1"> Black Olives<br>
+          <input type="checkbox" name="topping-option" value="2"> Basil<br>
+          <input type="checkbox" name="topping-option" value="3"> Pepperoni<br>
+        </div><br>
+        <div class="form-group-sizes">
+          <label for="size-option">What is your hunger level? Please pick your pizza size:</label>
+          <select class="form-control" id="size-option">
+            <option value="1">Mini - 10" round feeds 1</option>
+            <option value="2">Medium - 14" oblong feeds 2</option>
+            <option value="3">Large - 16" round feeds 3</option>
+          </select>
+        </div><br>
+        <button id="submit" type="submit" name="button">Submit Order</button>
+      </form>
+    </div>
   </div>  
   <div class="container">
-    <h4>Receipt:</h4>
-      <div id="answer">
-        <p>Total Cost: <span id="output"></span></p>
-      </div>
+    <div class = "card">
+      <h4>Receipt:</h4>
+        <div id="answer">
+          <p>Total Cost: <span id="output"></span></p>
+        </div>
+    </div>
   </div>
 </body>
 </html>

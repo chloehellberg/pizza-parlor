@@ -3,5 +3,20 @@
 }
 
 img {
-  float: right;
+  width: 60%;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  background-color: red;
+  font-weight: bold;
+}
+
+body {
+  background-color: black;
+}
+
+.card-title {
+  font-weight: bold;
 }

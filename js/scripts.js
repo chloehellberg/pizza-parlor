@@ -14,13 +14,13 @@ PizzaOrder.prototype.calculateCost = function () {
     totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
   }
   if (totalCost >= 12) {
-    return ("This costs $30");
+    return ("$30");
   } 
   if (totalCost <= 11 && totalCost >= 8) {
-    return ("This costs $20");
+    return ("$20");
   } 
   else {
-    return ("This costs $10");
+    return ("$10");
   }  
 }
 
