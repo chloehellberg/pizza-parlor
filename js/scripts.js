@@ -38,6 +38,9 @@ $(document).ready(function() {
     });
     
     newOrder.sizeChoice.push(parseInt($("#size-option").val()));
+
+    $("input:checkbox[name=topping-option]:checked").val("");
+    $("#size-option").val("");
       
     let result = newOrder.calculateCost();
 
