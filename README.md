@@ -12,7 +12,7 @@
   
 * Spec 3: Put in user inputs to pull in data. (Allow the user to choose toppings and size for the pizza they'd like to order.) 
 
-* Spec 4: Create outputs for display on website. Tie UI and Business Logic together
+* Spec 4: Create outputs for display on website. Tie UI and Business Logic together.
 
 ## Setup/Installation Requirements
 
