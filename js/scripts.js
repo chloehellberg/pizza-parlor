@@ -22,8 +22,7 @@ PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
     else {
       return ("This costs $10");
     }  
-  }
-
+}
 
 
 // UI Logic
@@ -37,37 +36,12 @@ $(document).ready(function() {
     $("input:checkbox[name=topping-option]:checked").each(function(){
       newOrder.toppingsChoice.push(parseInt($(this).val()));
     });
-      newOrder.sizeChoice.push(parseInt($("#size-option").val()));
+    
+    newOrder.sizeChoice.push(parseInt($("#size-option").val()));
       
-      newOrder.calculateCost();
-      console.log(newOrder.calcuateCost());
+    let result = newOrder.calculateCost();
+
+    $("#output").text(result);
+    $("#answer").show(result);
   });   
 });
-
-
-
-
-
-
-// PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
-//   // let toppingsChoiceTotal = [this.toppingsChoice.reduce((a,b) => a + b, 0)];
-//   // let sizeChoiceTotal = this.sizeChoice;
-//   let toppingsChoiceTotal = [10];
-//   let sizeChoiceTotal = [3]
-//   let totalCost = 0;
-  
-//   for(let i=0; i< toppingsChoiceTotal.length; i++) {
-//     totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
-//   }
-//     if (totalCost === 13) {
-//       return ("This costs $30");
-//     } 
-//     if (totalCost >= 10) {
-//       return ("This costs $20");
-//     } 
-//     else {
-//       return ("This costs $10");
-//     }  
-//   }
-// let newOrder = new PizzaOrder();
-// newOrder.calculateCost();
