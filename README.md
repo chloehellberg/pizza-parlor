@@ -7,21 +7,12 @@
 ## Description/Spec Details
 
 * Spec 1: Create a pizza object constructor with properties for toppings and size.
-  * Input: 
-  * Output: 
 
 * Spec 2: Create a prototype method for the cost of the pizza based on selections. Use your own formula for this.
-  * Input: 
-  * Output: 
-
-* Spec 3: Put in user inputs to pull in data. (Allow the user to choose toppings and size for the pizza they'd like to order.)
-  * Input: 
-  * Output: 
+  
+* Spec 3: Put in user inputs to pull in data. (Allow the user to choose toppings and size for the pizza they'd like to order.) 
 
 * Spec 4: Create outputs for display on website. Tie UI and Business Logic together
-  * Input: 
-  * Output: 
-
 
 ## Setup/Installation Requirements
 
