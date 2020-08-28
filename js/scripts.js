@@ -5,7 +5,7 @@ function PizzaOrder () {
   this.sizeChoice = []
 }
 
-PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
+PizzaOrder.prototype.calculateCost = function () {
   let toppingsChoiceTotal = [this.toppingsChoice.reduce((a,b) => a + b, 0)];
   let sizeChoiceTotal = this.sizeChoice;
   let totalCost = 0;
@@ -13,15 +13,15 @@ PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
   for(let i=0; i< toppingsChoiceTotal.length; i++) {
     totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
   }
-    if (totalCost === 13) {
-      return ("This costs $30");
-    } 
-    if (totalCost >= 10) {
-      return ("This costs $20");
-    } 
-    else {
-      return ("This costs $10");
-    }  
+  if (totalCost >= 12) {
+    return ("This costs $30");
+  } 
+  if (totalCost <= 11 && totalCost >= 8) {
+    return ("This costs $20");
+  } 
+  else {
+    return ("This costs $10");
+  }  
 }
 
 
@@ -42,6 +42,6 @@ $(document).ready(function() {
     let result = newOrder.calculateCost();
 
     $("#output").text(result);
-    $("#answer").show(result);
+    $("#answer").show();
   });   
 });
