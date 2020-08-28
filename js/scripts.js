@@ -18,9 +18,6 @@ function PizzaOrder () {
 // };
 
 
-
-
-
 // User Interface Logic
 
 $(document).ready(function() {
@@ -28,17 +25,14 @@ $(document).ready(function() {
     event.preventDefault();
     
     let newOrder = new PizzaOrder();
-    // newOrder.toppingsChoice.push
-    
 
-     $("input:checkbox[name=topping-option]:checked").each(function(){
+    $("input:checkbox[name=topping-option]:checked").each(function(){
       newOrder.toppingsChoice.push(parseInt($(this).val()));
     });
-      console.log(newOrder.toppingsChoice);
+      console.log('Toppings Choice', newOrder.toppingsChoice);
 
     newOrder.sizeChoice.push(parseInt($("#size-option").val()));
-    });
-
-  
+    console.log('Size Choice', newOrder.sizeChoice);
+    });   
 })
 
