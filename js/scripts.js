@@ -1,15 +1,10 @@
 // Create a website for a pizza company where a user can choose one or more individual toppings 
 //(cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
 
-// * Spec 1: Create a pizza object constructor with properties for toppings and size.
-//   * Input: 
-//   * Output: 
+// * Spec 2: Create a prototype method for the cost of the pizza based on selections. Use your own formula for this. 
 
-let pizza = {
 
-}
-
-//Pizza Object Constructor - This will be how 
+//Pizza Object Constructor 
 
 function PizzaOrder () {
   this.toppingsChoice = [],
@@ -20,6 +15,37 @@ let pizzaOptions = {
   toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms"],
   size = ["Small", "Medium", "Large"],
 }
+
+PizzaOrder.prototype.calculateCost = function (toppings, size) {
+  let orderArray = [];
+
+  for (let i = 0; i <= toppings.length; i++ )
+  
+}
+
+
+let order = new PizzaOrder()
+console.log(order.calculateCost());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
