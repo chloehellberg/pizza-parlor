@@ -39,7 +39,7 @@ $(document).ready(function() {
     
     newOrder.sizeChoice.push(parseInt($("#size-option").val()));
 
-    $("input:checkbox[name=topping-option]:checked").val("");
+    $("input[type=checkbox]").prop("checked", false);
     $("#size-option").val("");
       
     let result = newOrder.calculateCost();
