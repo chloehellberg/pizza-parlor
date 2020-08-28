@@ -36,8 +36,7 @@ $(document).ready(function() {
     });
       console.log(newOrder.toppingsChoice);
 
-    let sizeChoice = [];
-    sizeChoice.push(parseInt($("#size-option").val()));
+    newOrder.sizeChoice.push(parseInt($("#size-option").val()));
     });
 
   
