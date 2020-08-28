@@ -30,67 +30,14 @@ $(document).ready(function() {
   $("form#formOne").submit(function(event) {
     event.preventDefault();
 
-      $("#toppings-choice").show();
-      $("input:checkbox[name=topping-option]:checked").each(function(){
-        const toppingsChoice = $(this).val();
-      $("#toppings-choice").append(toppingsChoice + "<br>");
-      });
 
-      
+    let toppingsChoice = $("input:checkbox[name=topping-option]:checked").each(function(){
+      const toppingsChoice = [parseInt($(this).val())];
+      console.log(toppingsChoice);
+    })
+
+    let sizeChoice = parseInt[($("#size-option").val())];
+      console.log(sizeChoice);
 
   })
 })
-
-$("#work-responses").show();
-$("input:checkbox[name=work-transportation]:checked").each(function(){
-  const workTransportationMode = $(this).val();
-  $('#work-responses').append(workTransportationMode + "<br>");
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let sizeOptions = {
-//   size1: "Small",
-//   size2: "Medium",
-//   size3: "Large"
-// }
-
-// let sizeOptions = {
-//   size = ["Small", "Medium", "Large"],
-// }
-
-// let toppingOptions = {
-//   topping1: "Potato",
-//   topping2: "Carmelized Onions",
-//   topping3: "Fresh Chives",
-//   topping4: "Sausage",
-//   topping5: "Sauteed Mushrooms",
-// }
-
-// let toppingOptions = {
-//   toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms"]
-// }
-
