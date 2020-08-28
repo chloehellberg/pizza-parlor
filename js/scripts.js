@@ -1,9 +1,9 @@
 // //Business Logic
 
-// function PizzaOrder () {
-//   this.toppingsChoice = [],
-//   this.sizeChoice = []
-// }
+function PizzaOrder () {
+  this.toppingsChoice = [],
+  this.sizeChoice = []
+}
 
 // let pizzaOptions = {
 //   toppings: ["Potato", "Carmelized Onions", "Fresh Chives", "Sausage", "Sauteed Mushrooms", "Black Olives", "Basil", "Pepperoni"],
@@ -21,7 +21,6 @@
 
 
 
-
 // User Interface Logic
 
 $(document).ready(function() {
@@ -29,18 +28,18 @@ $(document).ready(function() {
     event.preventDefault();
     
     let newOrder = new PizzaOrder();
-    console.log(order.calculateCost());
+    // newOrder.toppingsChoice.push
+    
 
-    let toppingsChoice = [];
      $("input:checkbox[name=topping-option]:checked").each(function(){
-      toppingsChoice.push(parseInt($(this).val()));
-      console.log(toppingsChoice);
-    })
+      newOrder.toppingsChoice.push(parseInt($(this).val()));
+    });
+      console.log(newOrder.toppingsChoice);
 
     let sizeChoice = [];
     sizeChoice.push(parseInt($("#size-option").val()));
-    console.log(sizeChoice);
+    });
 
-  })
+  
 })
 
