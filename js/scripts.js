@@ -6,28 +6,24 @@ function PizzaOrder () {
 }
 
 PizzaOrder.prototype.calculateCost = function (toppingsChoice, sizeChoice) {
-  
   let toppingsChoiceTotal = [this.toppingsChoice.reduce((a,b) => a + b, 0)];
   let sizeChoiceTotal = this.sizeChoice;
   let totalCost = 0;
-
-  let toppingsChoiceTotal = [4];
-  let sizeChoiceTotal = [2];
-  let totalCost = 0;
   
   for(let i=0; i< toppingsChoiceTotal.length; i++) {
-  totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
+    totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
+    if (totalCost === 15) {
+      return ("This costs $15");
+    } 
+     if (totalCost === 13) {
+      return ("This costs $13");
+    } 
+      else if (totalCost === 10) {
+      return ("This costs $10");
+    } 
+      else
   }
-
-
-
-  let arr1 = [2];
-  let arr2 = [4];
-  let sum = 0;
-  for(var i=0; i< arr1.length; i++) {
-    sum += arr1[i]+arr2[i];
 }
-
 
 
 
