@@ -2,25 +2,26 @@
 
 function PizzaOrder () {
   this.toppingsChoice = [],
-  this.sizeChoice = []
-}
+  this.sizeChoice = [],
+  this.totalPrice = "";
+}                            
 
 PizzaOrder.prototype.calculateCost = function () {
   let toppingsChoiceTotal = [this.toppingsChoice.reduce((a,b) => a + b, 0)];
-  let sizeChoiceTotal = this.sizeChoice;
   let totalCost = 0;
   
+  
   for(let i=0; i< toppingsChoiceTotal.length; i++) {
-    totalCost += toppingsChoiceTotal[i]+sizeChoiceTotal[i];
+    totalCost += toppingsChoiceTotal[i]+this.sizeChoice[i];  
   }
   if (totalCost >= 12) {
-    return ("$30");
+    this.totalPrice = "$30";
   } 
-  if (totalCost <= 11 && totalCost >= 8) {
-    return ("$20");
+  else if (totalCost <= 11 && totalCost >= 8) {
+    this.totalPrice = "$20";
   } 
   else {
-    return ("$10");
+    this.totalPrice = "$10";
   }  
 }
 
@@ -42,9 +43,9 @@ $(document).ready(function() {
     $("input[type=checkbox]").prop("checked", false);
     $("#size-option").val("");
       
-    let result = newOrder.calculateCost();
+     newOrder.calculateCost();
 
-    $("#output").text(result);
+    $("#output").text(newOrder.totalPrice);    
     $("#answer").show();
   });   
 });
